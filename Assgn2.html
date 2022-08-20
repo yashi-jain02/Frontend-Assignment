@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <script type="text/javascript" src="abc.json"></script>
+        <script type="text/javascript" >
+            function load() {
+
+                text = "<table border='1'>"
+
+                Object.keys(data).map(data1=>{
+                    text += "<tr>";
+                    if(data1 === '0'){
+                        for(var i=0;i<data[data1].length;i++){
+                         text += "<th>" + data[data1][i] + "</th>";
+                        }
+                    }
+                    if(data1 !== '0'){
+                     for(var i=0;i<data[data1].length;i++){
+                        text += "<td>" + data[data1][i] + "</td>";
+                      }    
+                    }
+                    text += "</tr>";
+                })
+
+                text += "</table>"   
+                
+                console.log(text);
+                document.getElementById("demo").innerHTML = text;
+
+            }
+        </script>
+    </head>
+    <p id="demo"></p> 
+    <body onload="load()">
+        <div id="data">
+
+        </div>
+    </body>
+</html>
