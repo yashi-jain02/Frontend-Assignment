@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function sol() { 
+        var pnp =
+            document.forms.RegForm.pnp.value;
+        var gcsp =
+            document.forms.RegForm.gcsp.value;
+        var gcsb =
+            document.forms.RegForm.gcsb.value;
+        var icsf =
+            document.forms.RegForm.icsf.value;
+        var gcscred =
+            document.forms.RegForm.gcscred.value;
+        var re =
+            document.forms.RegForm.re.value;
+        
+        var regnosp= /^[A-Za-z0-9._-]+$/;
+        var regnum= /^.{5,}$/;
+        var regcant=/^((?!(_+-))[A-Za-z0-9]{9})$/g;                                 
+      
+        if (regnosp.test(pnp)==false || regnum.test(pnp)==false || regcant.test(pnp)==true) {
+           window.alert("Please enter your name properly.");
+            name.focus();
+            return false;
+        }
+        if (regnosp.test(gcsp)==false || regnum.test(gcsp)==false || regcant.test(gcsp)==true) {
+                    window.alert("Please gcs project name properly.");
+                    address.focus();
+                    return false;
+                }
+                 
+                if (regnosp.test(gcsb)==false || regnum.test(gcsb)==false || regcant.test(gcsb)==true) {
+                    window.alert("Please gcs bucket name properly.");
+                    email.focus();
+                    return false;
+                }
+                  
+                if (regnosp.test(icsf)==false || regnum.test(icsf)==false || regcant.test(icsf)==true) {
+                    alert("Please enter location properly.");
+                    password.focus();
+                    return false;
+                }
+ 
+                if(regnosp.test(gcscred)==false || regnum.test(gcscred)==false || regcant.test(gcscred)==true){
+                    alert("Please enter gcs credentials properly");
+                    password.focus();
+                    return false;
+ 
+                }
+                if (regnosp.test(re)==false || regnum.test(re)==false || regcant.test(re)==true) {
+                    alert("Please enter valid time.");
+                    phone.focus();
+                    return false;
+                }
+ 
+                
+ 
+                return true;
+            }
+        </script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+p[name=example]{
+  color:rgb(188, 187, 187)
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  background-color: rgb(241, 241, 241);
+  border-radius: 4px;
+  resize: vertical;
+}
+input[name=gcscred], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  background-color: rgb(208, 203, 203);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #3285d8;
+  color: white;
+  padding: 12px 50px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-right: 5px;
+}
+input[type=reset] {
+  background-color: #3285d8;
+  color: white;
+  padding: 12px 60px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+  width: 100%
+}
+
+input[type=submit]:hover {
+  background-color: #419ddb;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 15px;
+}
+
+.col-25 {
+  float: left;
+  width: 45%;
+  margin-top: 6px;
+  text-align: right;
+}
+
+.col-75 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+}
+.col-5 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  text-align: right;
+}
+.vl {
+  border-left: 2px solid black;
+  height: 34px;
+  position: absolute;
+  left: 48%;
+  margin-left: -3px;
+  margin-top: 52px;
+  top: 0;
+}
+.v2 {
+  border-left: 2px solid black;
+  height: 38px;
+  position: absolute;
+  left: 48%;
+  margin-left: -3px;
+  margin-top: 98px;
+  top: 0;
+}
+.v3 {
+  border-left: 2px solid black;
+  height: 38px;
+  position: absolute;
+  left: 48%;
+  margin-left: -3px;
+  margin-top: 145px;
+  top: 0;
+}
+.v4 {
+  border-left: 2px solid black;
+  height: 38px;
+  position: absolute;
+  left: 48%;
+  margin-left: -3px;
+  margin-top: 194px;
+  top: 0;
+}
+.v5 {
+  border-left: 2px solid black;
+  height: 38px;
+  position: absolute;
+  left: 48%;
+  margin-left: -3px;
+  margin-top: 242px;
+  top: 0;
+}
+.v6 {
+  border-left: 2px solid black;
+  height: 38px;
+  position: absolute;
+  left: 48%;
+  margin-left: -3px;
+  margin-top: 356px;
+  top: 0;
+}
+.v7 {
+  border-left: 2px solid black;
+  height: 38px;
+  position: absolute;
+  left: 48%;
+  margin-left: -3px;
+  margin-top: 405px;
+  top: 0;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.main-block {
+      max-width: 520px; 
+      min-height: 500px; 
+      padding: 10px 0;
+      margin: auto;
+      border-radius: 5px; 
+      border: solid 1px rgb(251, 245, 245);
+      box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+      background: #ebebeb;
+      background-color: rgb(255, 255, 255);
+      }
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+    <div class="main-block">
+<div class="container">
+  <form name="RegForm" onsubmit="return sol()" method="post"> 
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">Select your source : </label>
+    </div>
+    <div class="col-5">
+    <div class="v2"></div>
+      <p>Google cloud Storage</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Provide a name for pipeline : </label>
+    </div>
+    <div class="col-75">
+      <div class="vl"></div>
+      <input type="text" id="pnp" name="pnp"
+       placeholder="e.g., cust_shop_energy_gkateway001" >
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">GCS project name : </label>
+    </div>
+    <div class="col-75">
+      <div class="v3"></div>
+      <input type="text" id="gcsp" name="gcsp" placeholder="project-id">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <div class="v4"></div>
+      <label for="lname">GCS bucket name : </label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="gcsb" name="gcsb" placeholder="gs://your-bucket">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Input Cloud Storage File(s) : </label>
+    </div>
+    <div class="col-75">
+      <div class="v5"></div>
+      <input type="text" id="icsf" name="icsf" placeholder="GCS location of your files"> 
+      <p name="example">
+      Example: <br/>
+      gs://your-bucket/your-files/01.csv">
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">GCS credentials : </label>
+    </div>
+    <div class ="color">
+    <div class="col-75">
+      <div class="v6"></div>
+      <input type="text" id="gcscred" name="gcscred">
+    </div>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Run Every : </label>
+    </div>
+    <div class="col-75">
+      <div class="v7"></div>
+      <input type="text" id="re" name="re" placeholder="(in minutes)">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <input type="submit"
+                value="Create" name="Create" />
+    </div>
+    <div class="col-75">
+      <input type="reset"
+                value="Cancel" name="Cancel" />
+    </div>
+  </div>
+  </form>
+</div>
+</div>
+</body>
+</html>
+
+
